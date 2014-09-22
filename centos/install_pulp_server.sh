@@ -25,7 +25,7 @@ usage() {
 }
 
 function private_ip() {
-  local priv_ip=$(docker inspect --format '{{ .NetworkSettings.IPAddress }}' $(docker ps -l -q))
+  local priv_ip=$(sudo docker inspect --format '{{ .NetworkSettings.IPAddress }}' $(docker ps -l -q))
   echo $priv_ip
 }
 
